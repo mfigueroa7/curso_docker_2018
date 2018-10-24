@@ -15,11 +15,11 @@ EXPOSE 80
 
 ENV DATABASE_IP 192.167.2.9
 
-RUN usermod -aG root mfigueroa
+RUN usermod -aG sudo mfigueroa
 
 USER mfigueroa
 
-#ENTRYPOINT ["nginx","-g daemon off;"]
+VOLUME [ "/my-data" ]
 
 
 
